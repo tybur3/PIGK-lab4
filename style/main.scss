@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  display: flex;
+  // width: 100vw;
+  // flex-direction: column;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  // max-width: 100vw;
+
+  header {
+    background-image: url(../img/baner.svg);
+    width: 100vw;
+    height: 5rem;
+  }
+
+  nav {
+    width: 100vw;
+    background: black;
+    height: 2rem;
+  }
+
+  main {
+    // width: 40vw;
+    min-height: 80vh;
+  }
+
+  aside {
+    // width: 100vw;
+  }
+
+  footer {
+    width: 100vw;
+    background: black;
+    height: 3rem;
+  }
+}
+
+@media (min-width: 700px) {
+  body {
+    // flex-direction: row;
+    justify-content: space-between;
+  }
+
+  main {
+    // width: auto;
+  }
+
+  aside {
+    width: max-content;
+    background: lightgray;
+    // max-width: 500px;
+    min-width: 320px;
+  }
+}
+
+#container {
+  overflow: hidden;
+  position: relative;
+  height: 400px;
+
+  & > img {
+    max-width: 250px;
+    position: absolute;
+  }
+}
+
+//////
+
+body {
+  min-width: 520px;
+}
+.column {
+  // width: 170px;
+  // float: left;
+  // padding-bottom: 100px;
+  padding: 0.5em 0 0.5em 0;
+  // z-index: 10;
+}
+.portlet {
+  margin: 0.5em auto 0.5em auto;
+  padding: 0.3em;
+  max-width: 90%;
+}
+.portlet-header {
+  padding: 0.2em 0.3em;
+  margin-bottom: 0.5em;
+  position: relative;
+}
+.portlet-toggle {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -8px;
+}
+.portlet-content {
+  padding: 0.2em;
+}
+.portlet-placeholder {
+  border: 1px dotted black;
+  margin: 0 1em 1em 0;
+  height: 50px;
+}
+
+#move-active.clicked {
+  background: red;
+}
+
+//zad4
+
+header.active,
+main.active,
+nav.active,
+body.active,
+aside.active,
+footer.active {
+  // background: red;
+}
+
+div.portlet {
+  z-index: 10;
+  // position: static;
+  position: relative;
+}
+
+// button {
+//   z-index: 10;
+//   position: relative;
+// }
+
+#cover {
+  visibility: hidden;
+}
+
+#cover.active {
+  visibility: visible;
+
+  // height: 100%;
+  // width: 100vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  // background-color: hsla(0, 100%, 84%, 0.74);
+  background-color: hsla(0, 0%, 100%, 0.74);
+  // filter: blur(4px);
+}
+
+.column.active {
+  z-index: 9;
+  position: relative;
+  background-color: hsl(36, 100%, 88%);
+  border: 0.3em solid darken(hsl(36, 100%, 88%), 10%);
+  padding: 0.2em 0 0.2em 0;
+
+  // z-index: 3;
+}

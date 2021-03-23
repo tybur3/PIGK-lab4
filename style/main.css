@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+body header {
+  background-image: url(../img/baner.svg);
+  width: 100vw;
+  height: 5rem;
+}
+
+body nav {
+  width: 100vw;
+  background: black;
+  height: 2rem;
+}
+
+body main {
+  min-height: 80vh;
+}
+
+body footer {
+  width: 100vw;
+  background: black;
+  height: 3rem;
+}
+
+@media (min-width: 700px) {
+  body {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  aside {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    background: lightgray;
+    min-width: 320px;
+  }
+}
+
+#container {
+  overflow: hidden;
+  position: relative;
+  height: 400px;
+}
+
+#container > img {
+  max-width: 250px;
+  position: absolute;
+}
+
+body {
+  min-width: 520px;
+}
+
+.column {
+  padding: 0.5em 0 0.5em 0;
+}
+
+.portlet {
+  margin: 0.5em auto 0.5em auto;
+  padding: 0.3em;
+  max-width: 90%;
+}
+
+.portlet-header {
+  padding: 0.2em 0.3em;
+  margin-bottom: 0.5em;
+  position: relative;
+}
+
+.portlet-toggle {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -8px;
+}
+
+.portlet-content {
+  padding: 0.2em;
+}
+
+.portlet-placeholder {
+  border: 1px dotted black;
+  margin: 0 1em 1em 0;
+  height: 50px;
+}
+
+#move-active.clicked {
+  background: red;
+}
+
+div.portlet {
+  z-index: 10;
+  position: relative;
+}
+
+#cover {
+  visibility: hidden;
+}
+
+#cover.active {
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.74);
+}
+
+.column.active {
+  z-index: 9;
+  position: relative;
+  background-color: #ffe7c2;
+  border: 0.3em solid #ffd28f;
+  padding: 0.2em 0 0.2em 0;
+}
+/*# sourceMappingURL=main.css.map */
