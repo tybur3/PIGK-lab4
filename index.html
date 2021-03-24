@@ -14,10 +14,12 @@
     <link rel="stylesheet" href="style/main.css" />
   </head>
   <body>
-    <header></header>
+    <header><p>Baner o dowolnej zawartości do zaprojektowania</p></header>
     <nav>
-      nav
-      <button id="move-active">Dostosuj układ strony</button>
+      <button id="move-active">
+        <span class="btn-layout active">Dostosuj układ strony</span
+        ><span class="btn-layout">Zakończ edycję strony</span>
+      </button>
     </nav>
     <aside>
       <div class="column">
@@ -29,24 +31,88 @@
         </div>
         <div class="portlet">
           <div class="portlet-header">Odsyłacze</div>
-          <div class="portlet-content"></div>
+          <div class="portlet-content">
+            <ul>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+            </ul>
+          </div>
         </div>
         <div class="portlet">
           <div class="portlet-header">Ostatnie wydarzenia</div>
-          <div class="portlet-content"></div>
+          <div class="portlet-content">
+            <ul>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </aside>
-    <main>main</main>
+    <main>
+      <ul id="sortable1" class="droptrue">
+        <li class="ui-state-default">
+          <span>Kot</span>
+          <button id="DeleteButton">Usuń</button>
+        </li>
+        <li class="ui-state-default">
+          <span> Pies </span>
+          <button id="DeleteButton"><span> Usuń </span></button>
+        </li>
+        <li class="ui-state-default">
+          <span> Item 3 </span><button id="DeleteButton">Usuń</button>
+        </li>
+        <li class="ui-state-default">
+          <span> Item 4 </span><button id="DeleteButton">Usuń</button>
+        </li>
+        <li class="ui-state-default">
+          <span> Item 5 </span><button id="DeleteButton">Usuń</button>
+        </li>
+      </ul>
+
+      <ul id="sortable2" class="dropfalse">
+        <li class="ui-state-default">
+          <span> Cannot be dropped.. </span
+          ><button id="DeleteButton">Usuń</button>
+        </li>
+        <li class="ui-state-default">
+          <span> ..on an empty list </span
+          ><button id="DeleteButton">Usuń</button>
+        </li>
+        <li class="ui-state-default">
+          <span> Dog </span><button id="DeleteButton">Usuń</button>
+        </li>
+        <li class="ui-state-default">
+          <span> Item 4 </span><button id="DeleteButton">Usuń</button>
+        </li>
+        <li class="ui-state-default">
+          <span> Cat </span><button id="DeleteButton">Usuń</button>
+        </li>
+      </ul>
+    </main>
     <aside>
       <div class="column">
         <div class="portlet">
           <div class="portlet-header">Aktualności</div>
-          <div class="portlet-content"></div>
+          <div class="portlet-content">
+            <ul>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+            </ul>
+          </div>
         </div>
         <div class="portlet">
           <div class="portlet-header">Najlepiej ocenione</div>
-          <div class="portlet-content"></div>
+          <div class="portlet-content">
+            <ul>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+            </ul>
+          </div>
         </div>
         <div class="portlet">
           <div class="portlet-header">Cycler</div>

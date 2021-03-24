@@ -1,5 +1,5 @@
 //zad2
-$(function () {
+$(() => {
   $('#datepicker').datepicker();
 });
 
@@ -11,11 +11,13 @@ $(() => {
     $('.portlet-header').toggleClass('active');
 
     $('.portlet-toggle').toggleClass('ui-icon ui-icon-arrow-4');
+
+    $('.btn-layout').toggleClass('active');
     return true;
   });
 });
 
-$(function () {
+$(() => {
   $('.column').sortable({
     connectWith: '.column',
     handle: '.portlet-header.active',
@@ -33,24 +35,56 @@ $(function () {
 //zad4
 
 $(() => {
-  // function mouseUp(e) {
-  //   $('.column, header, main, nav, body, aside, footer').removeClass('active');
-  //   $('#cover').removeClass('active');
-  // }
+  let clicked = false;
 
   $('#move-active').on('click', () => {
-    // console.log($('#move-active').hasClass('clicked'));
-
-    if ($('#move-active').hasClass('clicked')) {
-      $('.portlet-header').on('mousedown', () => {
-        $('.column').addClass('active');
-        $('#cover').addClass('active');
+    clicked = $('#move-active').hasClass('clicked');
+    console.log(clicked);
+    if (clicked == true) {
+      $('.portlet-header').mousedown(() => {
+        if (clicked == true) {
+          $('.column').addClass('active');
+          $('#cover').addClass('active');
+        }
       });
-      // $('.portlet-header').on('mouseup', mouseUp);
-      $('.portlet-header').on('mouseup', () => {
-        $('.column');
+      $('*').mouseup(() => {
+        $('.column').removeClass('active');
         $('#cover').removeClass('active');
       });
     }
+  });
+});
+
+//zad5
+
+$(() => {
+  $('ul.droptrue').sortable({
+    connectWith: 'ul',
+  });
+
+  $('ul.dropfalse').sortable({
+    connectWith: 'ul',
+    dropOnEmpty: false,
+  });
+
+  $('#sortable1, #sortable2').disableSelection();
+
+  $('#sortable1>li>span,#sortable2>li>span').on('mousedown', () => {
+    $('#sortable1, #sortable2').addClass('active');
+    $('#cover').addClass('active');
+  });
+  $('*').on('mouseup', () => {
+    $('#sortable1, #sortable2').removeClass('active');
+    $('#cover').removeClass('active');
+  });
+});
+
+$(() => {
+  $(document).on('click', '#DeleteButton', function () {
+    $(this)
+      .parent()
+      .hide('slide', 500, () => {
+        $(this).parent().remove();
+      });
   });
 });

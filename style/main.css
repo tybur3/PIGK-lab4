@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap");
 body {
   margin: 0;
   display: -webkit-box;
@@ -6,18 +8,47 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   min-height: 100vh;
+  font: 500 1em lato, sans-serif;
 }
 
 body header {
   background-image: url(../img/baner.svg);
   width: 100vw;
   height: 5rem;
+  color: #333333;
+  font: 700 2.2em oswald, sans-serif;
+  text-shadow: 2px 2px white;
+  text-transform: uppercase;
+  padding: 0.5em 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body nav {
   width: 100vw;
   background: black;
-  height: 2rem;
+  height: 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 3vw 0 3vw;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 body main {
@@ -36,11 +67,19 @@ body footer {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   aside {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
-    background: lightgray;
+    background: #999999;
     min-width: 320px;
   }
 }
@@ -93,13 +132,22 @@ body {
   height: 50px;
 }
 
-#move-active.clicked {
-  background: red;
+#move-active {
+  width: 13rem;
+  height: 2.2rem;
+  font-size: 0.9em;
+  font-weight: 800;
+  border: 0.2em solid #f37353;
+  color: #f37353;
+  background-color: #fef3f0;
 }
 
-div.portlet {
-  z-index: 10;
-  position: relative;
+.btn-layout {
+  display: none;
+}
+
+.btn-layout.active {
+  display: inline;
 }
 
 #cover {
@@ -108,20 +156,79 @@ div.portlet {
 
 #cover.active {
   visibility: visible;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
   z-index: 2;
   background-color: rgba(255, 255, 255, 0.74);
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .column.active {
-  z-index: 9;
+  z-index: 4;
   position: relative;
-  background-color: #ffe7c2;
-  border: 0.3em solid #ffd28f;
+  background-color: #fef3f0;
+  border: 0.15em dashed #f37353;
   padding: 0.2em 0 0.2em 0;
+}
+
+#sortable1,
+#sortable2 {
+  list-style-type: none;
+  margin: 0;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  background: #eee;
+  padding: 5px;
+  height: 60%;
+  min-width: 15rem;
+}
+
+#sortable1.active,
+#sortable2.active {
+  z-index: 3;
+  background-color: #fef3f0;
+  border: 0.15em dashed #f37353;
+  padding: 0.2em 0 0.2em 0;
+}
+
+#sortable1 li,
+#sortable2 li {
+  margin: 5px;
+  font-size: 1.2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 2em;
+}
+
+#sortable1 li > span,
+#sortable2 li > span {
+  width: 100%;
+  padding: 5px;
+}
+
+#sortable1 li > button,
+#sortable2 li > button {
+  height: 80%;
+  margin-right: 0.4em;
+  border: 0.1em solid #f37353;
+  background-color: #f37353;
+  color: #fef3f0;
 }
 /*# sourceMappingURL=main.css.map */
