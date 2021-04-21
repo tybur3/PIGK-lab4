@@ -6,7 +6,7 @@
 1. Dla tworzonej strony internetowej proszę dodać dwa panele boczne (lewy oraz prawy).
 
 2. Dla paneli bocznych proszę utworzyć po 3 różne moduły (div-y z tytułami) zawierające następującą zawartość:
-  (a) Kalendarz
+  (A) Kalendarz
   (b) Interesujące odsyłacze
   (c) Ostatnie wydarzenia
   (d) Aktualności
